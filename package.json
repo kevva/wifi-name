@@ -1,0 +1,36 @@
+{
+  "name": "wifi-name",
+  "version": "1.0.0",
+  "description": "Get current wifi name",
+  "license": "MIT",
+  "repository": "kevva/wifi-name",
+  "author": {
+    "name": "Kevin Mårtensson",
+    "email": "kevinmartensson@gmail.com",
+    "url": "https://github.com/kevva"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "bin": {
+    "wifi-name": "cli.js"
+  },
+  "scripts": {
+    "test": "node test.js"
+  },
+  "files": [
+    "cli.js",
+    "index.js"
+  ],
+  "keywords": [
+    "cli",
+    "name",
+    "wifi"
+  ],
+  "dependencies": {
+    "meow": "^3.0.0"
+  },
+  "devDependencies": {
+    "ava": "^0.0.4"
+  }
+}
