@@ -23,6 +23,20 @@ wifiname(function (err, name) {
 });
 ```
 
+## CLI
+
+```sh
+$ npm install --global wifi-name
+```
+
+```sh
+$ wifi-name --help
+
+Usage
+  $ wifi-name
+  wu-tang lan
+```
+
 ## License
 
 MIT © [Kevin Mårtensson](https://github.com/kevva)
