@@ -13,7 +13,7 @@ test(function (t) {
 			t.assert(true);
 			return;
 		}
-
+		console.log(name);
 		t.assert(name);
 	});
 });
