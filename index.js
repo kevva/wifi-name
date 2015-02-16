@@ -25,12 +25,12 @@ module.exports = function (cb) {
 
 		if (stdout && process.platform === 'darwin') {
 			ret = /^\s*SSID: (.+)\s*$/gm.exec(stdout);
-			ret = ret.length ? ret[1] : null;
+			ret = ret && ret.length ? ret[1] : null;
 		}
 
 		if (stdout && process.platform === 'linux') {
 			ret = /^\s*yes:(.+)\s*$/gm.exec(stdout);
-			ret = ret.length ? ret[1].slice(1, ret[1].length - 1) : null;
+			ret = ret && ret.length ? ret[1].slice(1, ret[1].length - 1) : null;
 		}
 
 		cb(null, ret);
