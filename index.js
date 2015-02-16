@@ -8,7 +8,7 @@ module.exports = function (cb) {
 	if (process.platform === 'darwin') {
 		cmd = [
 			'/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/',
-			'Resources/airport -I | grep -e "\\bSSID:" | sed -e "s/^.*SSID: //'
+			'Resources/airport -I | grep -e "\\bSSID:" | sed -e "s/^.*SSID: //"'
 		].join('');
 	} else if (process.platform === 'linux') {
 		cmd = 'nmcli -t -f active,ssid dev wifi | egrep \'^yes\' | cut -d\\\' -f2';
