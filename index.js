@@ -41,6 +41,11 @@ module.exports = function (cb) {
 			ret = ret && ret.length ? ret[1] : null;
 		}
 
+		if (!ret) {
+			cb(new Error('Could not get SSID'));
+			return;
+		}
+
 		cb(null, ret);
 	});
 };
