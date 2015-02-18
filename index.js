@@ -13,8 +13,10 @@ module.exports = function (cb) {
 		].join('');
 	} else if (process.platform === 'linux') {
 		cmd = 'nmcli -t -f active,ssid dev wifi';
+	} else if (process.platform === 'win32') {
+		cmd = 'netsh wlan show interface';
 	} else {
-		throw new Error('Only OS X and Linux systems are supported');
+		throw new Error('Only OS X, Linux and Windows systems are supported');
 	}
 
 	exec(cmd, function (err, stdout) {
@@ -31,6 +33,11 @@ module.exports = function (cb) {
 		if (stdout && process.platform === 'linux') {
 			ret = /^\s*yes:(.+)\s*$/gm.exec(stdout);
 			ret = ret && ret.length ? ret[1].slice(1, ret[1].length - 1) : null;
+		}
+
+		if (stdout && process.platform === 'win32') {
+			ret = /^\s*SSID\s*: (.+)\s*$/gm.exec(stdout);
+			ret = ret && ret.length ? ret[1] : null;
 		}
 
 		cb(null, ret);
