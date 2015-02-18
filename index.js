@@ -1,25 +1,26 @@
 'use strict';
 
-var exec = require('child_process').exec;
+var execFile = require('child_process').execFile;
 
 module.exports = function (cb) {
 	var cmd;
+	var args;
 	var ret;
 
 	if (process.platform === 'darwin') {
-		cmd = [
-			'/System/Library/PrivateFrameworks/Apple80211.framework/Versions/',
-			'Current/Resources/airport -I'
-		].join('');
+		cmd = '/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport';
+		args = ['-I'];
 	} else if (process.platform === 'linux') {
-		cmd = 'nmcli -t -f active,ssid dev wifi';
+		cmd = 'nmcli';
+		args = ['-t', '-f', 'active,ssid', 'dev', 'wifi'];
 	} else if (process.platform === 'win32') {
-		cmd = 'netsh wlan show interface';
+		cmd = 'netsh';
+		args = ['wlan', 'show', 'interface'];
 	} else {
 		throw new Error('Only OS X, Linux and Windows systems are supported');
 	}
 
-	exec(cmd, function (err, stdout) {
+	execFile(cmd, args, function (err, stdout) {
 		if (err) {
 			cb(err);
 			return;
