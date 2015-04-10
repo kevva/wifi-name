@@ -14,6 +14,6 @@ test(function (t) {
 
 	wifiname(function (err, name) {
 		t.assert(!err, err);
-		t.assert(name);
+		t.assert(name, name);
 	});
 });

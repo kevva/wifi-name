@@ -2,11 +2,13 @@
 
 > Get current wifi name
 
+
 ## Install
 
-```sh
+```
 $ npm install --save wifi-name
 ```
+
 
 ## Usage
 
@@ -14,28 +16,26 @@ $ npm install --save wifi-name
 var wifiname = require('wifi-name');
 
 wifiname(function (err, name) {
-	if (err) {
-		throw err;
-	}
-
 	console.log(name);
 	//=> wu-tang lan
 });
 ```
 
+
 ## CLI
 
-```sh
+```
 $ npm install --global wifi-name
 ```
 
-```sh
+```
 $ wifi-name --help
 
-Usage
-  $ wifi-name
-  wu-tang lan
+  Usage
+    $ wifi-name
+    wu-tang lan
 ```
+
 
 ## License
 
