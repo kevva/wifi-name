@@ -1,7 +1,7 @@
 'use strict';
 
 var test = require('ava');
-var wifiname = require('./');
+var wifiName = require('./');
 
 test(function (t) {
 	t.plan(2);
@@ -12,7 +12,7 @@ test(function (t) {
 		return;
 	}
 
-	wifiname(function (err, name) {
+	wifiName(function (err, name) {
 		t.assert(!err, err);
 		t.assert(name, name);
 	});

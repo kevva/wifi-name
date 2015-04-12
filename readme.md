@@ -13,9 +13,9 @@ $ npm install --save wifi-name
 ## Usage
 
 ```js
-var wifiname = require('wifi-name');
+var wifiName = require('wifi-name');
 
-wifiname(function (err, name) {
+wifiName(function (err, name) {
 	console.log(name);
 	//=> wu-tang lan
 });

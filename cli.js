@@ -2,7 +2,7 @@
 'use strict';
 
 var meow = require('meow');
-var wifiname = require('./');
+var wifiName = require('./');
 
 meow({
 	help: [
@@ -12,7 +12,7 @@ meow({
 	].join('\n')
 });
 
-wifiname(function (err, name) {
+wifiName(function (err, name) {
 	if (err) {
 		console.error(err.message);
 		process.exit(1);
