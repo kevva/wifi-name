@@ -1,4 +1,4 @@
-# wifi-name [![Build Status](http://img.shields.io/travis/kevva/wifi-name.svg?style=flat)](https://travis-ci.org/kevva/wifi-name)
+# wifi-name [![Build Status](https://travis-ci.org/kevva/wifi-name.svg?branch=master)](https://travis-ci.org/kevva/wifi-name)
 
 > Get current wifi name
 
