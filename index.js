@@ -11,8 +11,8 @@ module.exports = function (cb) {
 		cmd = '/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport';
 		args = ['-I'];
 	} else if (process.platform === 'linux') {
-		cmd = 'nmcli';
-		args = ['-t', '-f', 'active,ssid', 'dev', 'wifi'];
+		cmd = 'iwgetid';
+		args = ['--raw'];
 	} else if (process.platform === 'win32') {
 		cmd = 'netsh';
 		args = ['wlan', 'show', 'interface'];
@@ -32,8 +32,7 @@ module.exports = function (cb) {
 		}
 
 		if (stdout && process.platform === 'linux') {
-			ret = /^\s*yes:(.+)\s*$/gm.exec(stdout);
-			ret = ret && ret.length ? ret[1].slice(1, ret[1].length - 1) : null;
+			ret = stdout.replace('\n', '');
 		}
 
 		if (stdout && process.platform === 'win32') {
