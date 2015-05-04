@@ -17,7 +17,7 @@ var wifiName = require('wifi-name');
 
 wifiName(function (err, name) {
 	console.log(name);
-	//=> wu-tang lan
+	//=> 'wu-tang lan'
 });
 ```
 
