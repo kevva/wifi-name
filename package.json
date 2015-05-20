@@ -12,9 +12,7 @@
   "engines": {
     "node": ">=0.10.0"
   },
-  "bin": {
-    "wifi-name": "cli.js"
-  },
+  "bin": "cli.js",
   "scripts": {
     "test": "node test.js"
   },
@@ -23,8 +21,11 @@
     "index.js"
   ],
   "keywords": [
+    "app",
     "cli",
+    "cli-app",
     "name",
+    "network",
     "wifi"
   ],
   "dependencies": {
