@@ -8,7 +8,7 @@ meow({
 		'Usage',
 		'  $ wifi-name',
 		'  wu-tang lan'
-	].join('\n')
+	]
 });
 
 wifiName(function (err, name) {

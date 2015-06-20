@@ -30,7 +30,7 @@
   ],
   "dependencies": {
     "linux-wifi-name": "^1.0.0",
-    "meow": "^3.0.0",
+    "meow": "^3.3.0",
     "osx-wifi-name": "^1.0.0",
     "win-wifi-name": "^1.0.0"
   },
