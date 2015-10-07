@@ -1,8 +1,7 @@
-'use strict';
-var test = require('ava');
-var wifiName = require('./');
+import test from 'ava';
+import fn from './';
 
-test(function (t) {
+test(async t => {
 	t.plan(1);
 
 	if (process.env.CI) {
@@ -10,7 +9,6 @@ test(function (t) {
 		return;
 	}
 
-	wifiName().then(function (name) {
-		t.assert(name, name);
-	});
+	const name = await fn();
+	t.ok(name);
 });
