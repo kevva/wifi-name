@@ -1,16 +1,13 @@
 #!/usr/bin/env node
+/* eslint-disable no-mixed-spaces-and-tabs */
 'use strict';
-var meow = require('meow');
-var wifiName = require('./');
+const meow = require('meow');
+const wifiName = require('./');
 
-meow({
-	help: [
-		'Usage',
-		'  $ wifi-name',
-		'  wu-tang lan'
-	]
-});
+meow(`
+	Usage
+	  $ wifi-name
+	  wu-tang lan
+`);
 
-wifiName().then(function (name) {
-	console.log(name);
-});
+wifiName().then(name => console.log(name));

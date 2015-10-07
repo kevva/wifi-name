@@ -31,16 +31,13 @@
   ],
   "dependencies": {
     "meow": "^3.3.0",
-    "pify": "^2.2.0",
-    "pinkie-promise": "^1.0.0"
+    "pify": "^2.2.0"
   },
   "devDependencies": {
     "ava": "*",
     "xo": "*"
   },
   "xo": {
-    "ignore": [
-      "test.js"
-    ]
+    "esnext": true
   }
 }
