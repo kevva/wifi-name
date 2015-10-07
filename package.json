@@ -18,7 +18,8 @@
   },
   "files": [
     "cli.js",
-    "index.js"
+    "index.js",
+    "lib"
   ],
   "keywords": [
     "app",
@@ -29,10 +30,9 @@
     "wifi"
   ],
   "dependencies": {
-    "linux-wifi-name": "^1.0.0",
     "meow": "^3.3.0",
-    "osx-wifi-name": "^1.0.0",
-    "win-wifi-name": "^1.0.0"
+    "pify": "^2.2.0",
+    "pinkie-promise": "^1.0.0"
   },
   "devDependencies": {
     "ava": "^0.0.4"

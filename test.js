@@ -3,16 +3,14 @@ var test = require('ava');
 var wifiName = require('./');
 
 test(function (t) {
-	t.plan(2);
+	t.plan(1);
 
 	if (process.env.CI) {
-		t.assert(true);
 		t.assert(true);
 		return;
 	}
 
-	wifiName(function (err, name) {
-		t.assert(!err, err);
+	wifiName().then(function (name) {
 		t.assert(name, name);
 	});
 });

@@ -1,9 +1,9 @@
 'use strict';
 
 if (process.platform === 'darwin') {
-	module.exports = require('osx-wifi-name');
+	module.exports = require('./lib/osx');
 } else if (process.platform === 'win32') {
-	module.exports = require('win-wifi-name');
+	module.exports = require('./lib/win');
 } else {
-	module.exports = require('linux-wifi-name');
+	module.exports = require('./lib/linux');
 }

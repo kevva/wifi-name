@@ -11,11 +11,6 @@ meow({
 	]
 });
 
-wifiName(function (err, name) {
-	if (err) {
-		console.error(err.message);
-		process.exit(1);
-	}
-
+wifiName().then(function (name) {
 	console.log(name);
 });
