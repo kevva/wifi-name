@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-/* eslint-disable no-mixed-spaces-and-tabs */
 'use strict';
 const meow = require('meow');
 const wifiName = require('./');
@@ -10,4 +9,4 @@ meow(`
 	  wu-tang lan
 `);
 
-wifiName().then(name => console.log(name));
+wifiName().then(console.log);

@@ -10,7 +10,7 @@
     "url": "https://github.com/kevva"
   },
   "engines": {
-    "node": ">=0.10.0"
+    "node": ">=4"
   },
   "bin": "cli.js",
   "scripts": {
@@ -30,8 +30,8 @@
     "wifi"
   ],
   "dependencies": {
-    "meow": "^3.3.0",
-    "pify": "^2.2.0"
+    "execa": "^0.4.0",
+    "meow": "^3.3.0"
   },
   "devDependencies": {
     "ava": "*",
