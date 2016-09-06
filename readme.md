@@ -24,7 +24,7 @@ wifiName().then(name => {
 
 ## Related
 
-* [wifi-name](https://github.com/kevva/wifi-name-cli) - CLI for this module
+* [wifi-name-cli](https://github.com/kevva/wifi-name-cli) - CLI for this module
 
 
 ## License
