@@ -22,19 +22,9 @@ wifiName().then(name => {
 ```
 
 
-## CLI
+## Related
 
-```
-$ npm install --global wifi-name
-```
-
-```
-$ wifi-name --help
-
-  Usage
-    $ wifi-name
-    wu-tang lan
-```
+* [wifi-name](https://github.com/kevva/wifi-name-cli) - CLI for this module
 
 
 ## License
