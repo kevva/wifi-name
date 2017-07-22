@@ -6,7 +6,7 @@
 ## Install
 
 ```
-$ npm install --save wifi-name
+$ npm install wifi-name
 ```
 
 

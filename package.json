@@ -1,37 +1,34 @@
 {
-  "name": "wifi-name",
-  "version": "3.0.0",
-  "description": "Get current wifi name",
-  "license": "MIT",
-  "repository": "kevva/wifi-name",
-  "author": {
-    "name": "Kevin Mårtensson",
-    "email": "kevinmartensson@gmail.com",
-    "url": "https://github.com/kevva"
-  },
-  "engines": {
-    "node": ">=4"
-  },
-  "scripts": {
-    "test": "xo && ava"
-  },
-  "files": [
-    "index.js",
-    "lib"
-  ],
-  "keywords": [
-    "name",
-    "network",
-    "wifi"
-  ],
-  "dependencies": {
-    "execa": "^0.4.0"
-  },
-  "devDependencies": {
-    "ava": "*",
-    "xo": "*"
-  },
-  "xo": {
-    "esnext": true
-  }
+	"name": "wifi-name",
+	"version": "3.0.0",
+	"description": "Get current wifi name",
+	"license": "MIT",
+	"repository": "kevva/wifi-name",
+	"author": {
+		"name": "Kevin Mårtensson",
+		"email": "kevinmartensson@gmail.com",
+		"url": "https://github.com/kevva"
+	},
+	"engines": {
+		"node": ">=4"
+	},
+	"scripts": {
+		"test": "xo && ava"
+	},
+	"files": [
+		"index.js",
+		"lib"
+	],
+	"keywords": [
+		"name",
+		"network",
+		"wifi"
+	],
+	"dependencies": {
+		"execa": "^0.7.0"
+	},
+	"devDependencies": {
+		"ava": "*",
+		"xo": "*"
+	}
 }
