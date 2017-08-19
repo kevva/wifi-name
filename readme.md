@@ -22,6 +22,17 @@ wifiName().then(name => {
 ```
 
 
+## API
+
+### wifiName()
+
+Returns a `Promise` for a `string` with the current wifi name.
+
+### wifiName.sync()
+
+Returns a `string` with the current wifi name.
+
+
 ## Related
 
 * [wifi-name-cli](https://github.com/kevva/wifi-name-cli) - CLI for this module

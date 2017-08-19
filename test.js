@@ -1,7 +1,10 @@
 import test from 'ava';
 import m from '.';
 
-test(async t => {
-	const name = await m();
-	t.truthy(name);
+test('async', async t => {
+	t.truthy(await m());
+});
+
+test('sync', t => {
+	t.truthy(m.sync());
 });
